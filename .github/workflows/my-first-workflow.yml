@@ -36,3 +36,19 @@ jobs:
     steps:
       - name: Job with multiple dependencies 
         run: sleep 7
+  job5: 
+    name: JOB5 
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Step-1 
+        run: | 
+          pwd 
+          ls -ltr 
+          hostname
+      - name: Step-2 Checkout 
+        uses: actions/checkout@v6.1.0
+      - name: Step-3 
+        run: | 
+          pwd 
+          ls -ltr 
+          hostname 
