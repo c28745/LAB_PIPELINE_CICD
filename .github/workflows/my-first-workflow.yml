@@ -29,3 +29,10 @@ jobs:
     steps:
       - name: Job with single dependency 
         run: sleep 7 
+  job4: 
+    name: JOB4 
+    runs-on: ubuntu-latest 
+    needs: [job1, job2, job3] 
+    steps:
+      - name: Job with multiple dependencies 
+        run: sleep 7
