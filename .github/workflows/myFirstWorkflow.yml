@@ -28,3 +28,9 @@ jobs:
           mkdir artifacts
           echo `ls -ltr` >> artifacts/lists.txt
           echo `hostname` >> artifacts/hostname.txt
+          
+      - name: Upload Single File
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: single-file
+          path: ./myartifact.txt
